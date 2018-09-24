@@ -17,4 +17,4 @@ EOF
 
 ln -s `pwd`/init.sls /srv/salt/base/init.sls
 
-#salt-call --local state.apply -l info
+salt-call --local state.apply -l info

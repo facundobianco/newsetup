@@ -4,6 +4,7 @@ pkgs:
       - colordiff
       - git
       - google-chrome-stable
+      - pass
       - tilda
       - tmux
       - vim-nox
