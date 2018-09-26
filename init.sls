@@ -115,7 +115,7 @@ symlink-vim:
 
 vim-plugins:
   cmd.run:
-    - only_if: ls -1 /home/facundo/.vim/bundle | wc -l | grep '1$'
+    - only_if: ls -1 /home/facundo/.vim/bundle | wc -l | grep -q '1$'
     - name: vim +PluginInstall +qall &>/dev/null
     - user: facundo
     - require:
