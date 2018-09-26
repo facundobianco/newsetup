@@ -1,11 +1,13 @@
 pkgs:
   pkg.installed:
     - pkgs:
+      - bc
       - colordiff
       - git
       - google-chrome-stable
       - pass
       - pm-utils
+      - python-pygments
       - tilda
       - tmux
       - vim-nox
