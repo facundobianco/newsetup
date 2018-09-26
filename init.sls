@@ -93,3 +93,12 @@ symlink-vim:
     - require:
       - pkg: pkgs
       - git: git-clone-dotfiles
+
+vim-plugins:
+  cmd.run:
+    - only_if: ls -1 /home/facundo/.vim/bundle | wc -l | grep '1$'
+    - name: vim +PluginInstall +qall &>/dev/null
+    - user: facundo
+    - require:
+      - git: git-clone-vundle
+      - file: symlink-vim
