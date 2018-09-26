@@ -60,6 +60,23 @@ git-clone-vundle:
     - require:
       - pkg: pkgs
 
+symlink-bash-personal:
+  file.symlink:
+    - name: /etc/profile.d/personal.sh
+    - target: /home/facundo/github/dotfiles/ncurses/bash/personal.sh
+    - require:
+      - pkg: pkgs
+      - git: git-clone-dotfiles
+
+symlink-bash-profile:
+  file.symlink:
+    - name: /home/facundo/.bash_profile
+    - target: github/dotfiles/ncurses/bash/bash_profile
+    - user: facundo
+    - require:
+      - pkg: pkgs
+      - git: git-clone-dotfiles
+
 symlink-tmux:
   file.symlink:
     - name: /home/facundo/.tmux.conf
